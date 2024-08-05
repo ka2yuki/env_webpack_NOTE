@@ -17,9 +17,7 @@ npm i -D webpack webpack-dev-server webpack-cli @webpack-cli/generators
 npm audit fix
 npm audit
 npx webpack init # webpack.config.js作成
-
-# pakege.json に追記される scripts.
-npm run serve # open localhost:devserver.
+npx webpack serve # open localhost:devserver.
 ```
 
 # Documentation
