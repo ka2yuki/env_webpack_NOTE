@@ -12,7 +12,7 @@ node -v
 
 pakege.json作成 ～ 開発サーバーまで
 ```bash
-npm i -y
+npm init -y
 npm i -D webpack webpack-dev-server webpack-cli @webpack-cli/generators
 npm audit fix
 npm audit
