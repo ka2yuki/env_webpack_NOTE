@@ -28,6 +28,10 @@ npm run serve # open localhost:devserver.
 webpack --config prod.config.js
 ```
 
+## 気になるAwesome-Webpack/#Loaders
+- [Webpack Dashboard](https://github.com/FormidableLabs/webpack-dashboard)
+- [etc...  Awesome-Webpack Loaders](https://webpack.js.org/awesome-webpack/)
+
 # Error log
 - `--template=default` でエラー on WSL
   - nvmを使用することにしたら解決しました。
