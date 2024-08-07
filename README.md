@@ -92,4 +92,4 @@ https://webpack.js.org/configuration/module/#ruleparserdataurlcondition
 # todo read:books:
 - [css-loader](https://webpack.js.org/loaders/css-loader/)
 - [style-loader](https://webpack.js.org/loaders/style-loader/)
-- [×] create-react-appの[webpack.config.js](https://github.com/facebookincubator/create-react-app/blob/main/packages%2Freact-scripts%2Fconfig%2Fwebpack.config.js)
+- [] create-react-appの[webpack.config.js](https://github.com/facebookincubator/create-react-app/blob/main/packages%2Freact-scripts%2Fconfig%2Fwebpack.config.js)
