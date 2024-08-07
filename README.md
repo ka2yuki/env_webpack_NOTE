@@ -26,8 +26,9 @@ npx webpack serve # open localhost:devserver.
 ```bash
 webpack --config prod.config.js
 ```
+- [plugins](https://webpack.js.org/plugins/)
 
-## 気になるAwesome-Webpack/#Loaders
+- ### 気になるAwesome-Webpack/#Loaders
 - [Webpack Dashboard](https://github.com/FormidableLabs/webpack-dashboard)
 - [etc...  Awesome-Webpack Loaders](https://webpack.js.org/awesome-webpack/)
 
@@ -76,5 +77,3 @@ Bundle画像サイズの制限
         }}]}
 ```
 https://webpack.js.org/configuration/module/#ruleparserdataurlcondition
-# Plugins | webpack
-https://webpack.js.org/plugins/
