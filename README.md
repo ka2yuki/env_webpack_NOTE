@@ -1,8 +1,7 @@
 # Webpack ENVs 
-- たぶん現在react用のwebpack
-
-# Webpack環境の作成
+## Webpack環境の作成
 環境：WSL
+
 ```bash
 nvm -v
 > 0.39.7
