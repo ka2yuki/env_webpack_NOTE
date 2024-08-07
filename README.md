@@ -14,8 +14,13 @@ pakege.json作成 ～ 開発サーバーまで
 ```bash
 npm init -y
 npm i -D webpack webpack-dev-server webpack-cli @webpack-cli/generators
+npm install --save-dev css-loader
+
 npm audit fix
 npm audit
+echo "==========================" && sleep 2
+npm fund
+
 npx webpack init # webpack.config.js作成
 npx webpack serve # open localhost:devserver.
 ```
@@ -43,21 +48,24 @@ webpack5
 - HotReloadされない: [DevServer](https://webpack.js.org/configuration/dev-server/)
   - webpack.config.js の config.entryファイルを watch している。
 
-# points
+# Points
 [webpack.config.js](./webpack.config.js)
 ```js
 const path = require("path");
 ```
 Nodejs.API: path: https://nodejs.org/api/path.html
+
 ```js
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 ```
 https://webpack.js.org/plugins/html-webpack-plugin/
+
 ```js
 const MiniCssExtractPlugin = require("mini-css-extract-plugin"); 
 // config.plugin.push( new MiniCssExtractPlugin() );
 ```
 https://webpack.js.org/plugins/mini-css-extract-plugin/
+
 ```js
 const WorkboxWebpackPlugin = require("workbox-webpack-plugin");
 // config.plugin.push( new WorkboxWebpackPlugin.GenerateSW() );
@@ -77,3 +85,11 @@ Bundle画像サイズの制限
         }}]}
 ```
 https://webpack.js.org/configuration/module/#ruleparserdataurlcondition
+
+---
+
+[Babel設定について.md](readmes/babel.md)
+
+# todo read:books:
+- [css-loader](https://webpack.js.org/loaders/css-loader/)
+- [style-loader](https://webpack.js.org/loaders/style-loader/)
