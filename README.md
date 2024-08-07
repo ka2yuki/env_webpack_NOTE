@@ -1,4 +1,4 @@
-# ENVs webpack
+# Webpack ENVs 
 - たぶん現在react用のwebpack
 
 # Webpack環境の作成
@@ -37,7 +37,44 @@ webpack --config prod.config.js
 
 # ハマったポイント
 webpack5
-- webpack-dev-serverをインストールしていない為に開発サーバーが立ち上がらない。
-  - `[webpack-cli] For using 'serve' command you need to install: 'webpack-dev-server' package.` 
-- hotreloadされない: [DevServer](https://webpack.js.org/configuration/dev-server/)
-  -   webpack.config.js の config.entryファイルを watch している
+- 開発サーバーが立ち上がらない: webpack-dev-serverを未インストール。
+  - エラーメッセージ：`[webpack-cli] For using 'serve' command you need to install: 'webpack-dev-server' package.` 
+- HotReloadされない: [DevServer](https://webpack.js.org/configuration/dev-server/)
+  - webpack.config.js の config.entryファイルを watch している。
+
+# points
+[webpack.config.js](./webpack.config.js)
+```js
+const path = require("path");
+```
+Nodejs.API: path: https://nodejs.org/api/path.html
+```js
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+```
+https://webpack.js.org/plugins/html-webpack-plugin/
+```js
+const MiniCssExtractPlugin = require("mini-css-extract-plugin"); 
+// config.plugin.push( new MiniCssExtractPlugin() );
+```
+https://webpack.js.org/plugins/mini-css-extract-plugin/
+```js
+const WorkboxWebpackPlugin = require("workbox-webpack-plugin");
+// config.plugin.push( new WorkboxWebpackPlugin.GenerateSW() );
+```
+[workbox-webpack-plugin | google🔍](https://www.google.com/search?q=workbox-webpack-plugin&rlz=1C1TKQJ_jaJP1051JP1051&oq=workbox-webpack-plugin&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIGCAEQABgeMgYIAhAAGB4yBggDEAAYHjIGCAQQABgeMgYIBRAAGB4yBggGEAAYHjIGCAcQABgeMgYICBAAGB4yBggJEAAYHtIBBzQ3OGowajSoAgCwAgA&sourceid=chrome&ie=UTF-8)  
+https://developer.chrome.com/docs/workbox/modules/workbox-webpack-plugin?hl=ja
+
+Bundle画像サイズの制限
+```js
+  module: {
+    rules: [
+      {
+        parser: {
+          dataUrlCondition: {
+            maxSize: 4 * 1024,
+          }
+        }}]}
+```
+https://webpack.js.org/configuration/module/#ruleparserdataurlcondition
+# Plugins | webpack
+https://webpack.js.org/plugins/
