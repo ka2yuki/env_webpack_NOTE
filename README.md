@@ -42,10 +42,10 @@ webpack --config prod.config.js
 
 # ハマったポイント
 webpack5
-- 開発サーバーが立ち上がらない: webpack-dev-serverを未インストール。
+- 開発サーバーが立ち上がらない: webpack-dev-serverをインストールする必要がある。
   - エラーメッセージ：`[webpack-cli] For using 'serve' command you need to install: 'webpack-dev-server' package.` 
 - HotReloadされない: [DevServer](https://webpack.js.org/configuration/dev-server/)
-  - webpack.config.js の config.entryファイルを watch している。
+  - webpack.config.js の config.entryのファイルをwatch しているが バンドルされない他ファイルを編集していた。。
 
 # Points
 [webpack.config.js](./webpack.config.js)
