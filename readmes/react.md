@@ -1,3 +1,5 @@
+[webpack基本設定.md](../README.md)
+
 # WebpackでReact
 - `.jsx` を `.js` にすると直ったエラー
   - `this file type`が **ファイル拡張子** のこと と思われる。

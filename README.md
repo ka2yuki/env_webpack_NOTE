@@ -60,6 +60,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 https://webpack.js.org/plugins/html-webpack-plugin/
 
 ```js
+// ⚠️ Since webpack v4 the extract-text-webpack-plugin should not be used for css.  Use this below instead.
 const MiniCssExtractPlugin = require("mini-css-extract-plugin"); 
 // config.plugin.push( new MiniCssExtractPlugin() );
 ```
@@ -85,11 +86,18 @@ Bundle画像サイズの制限
 ```
 https://webpack.js.org/configuration/module/#ruleparserdataurlcondition
 
----
 
-[Babel設定について.md](readmes/babel.md)
+# [Babel](https://babeljs.io/)
+> JavaScript compiler.
+- [Babel設定について.md](readmes/babel.md)
+- [React設定について.md](readmes/react.md)
+
+# [ESLint](https://eslint.org/)
+> 構文チェック
+- [ESLint設定について.md](readmes/eslint.md)
+
 
 # todo read:books:
-- [css-loader](https://webpack.js.org/loaders/css-loader/)
-- [style-loader](https://webpack.js.org/loaders/style-loader/)
-- [] create-react-appの[webpack.config.js](https://github.com/facebookincubator/create-react-app/blob/main/packages%2Freact-scripts%2Fconfig%2Fwebpack.config.js)
+- [ ] [css-loader](https://webpack.js.org/loaders/css-loader/)
+- [ ] [style-loader](https://webpack.js.org/loaders/style-loader/)
+- [ ] create-react-appの[webpack.config.js](https://github.com/facebookincubator/create-react-app/blob/main/packages%2Freact-scripts%2Fconfig%2Fwebpack.config.js)

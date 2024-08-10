@@ -1,4 +1,4 @@
-[webpack基本設定.md](README.md)
+[webpack基本設定.md](../README.md)
 
 # Babel設定のメモ
 
